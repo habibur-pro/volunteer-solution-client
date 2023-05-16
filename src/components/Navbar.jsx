@@ -32,13 +32,20 @@ const Navbar = () => {
                     <li>
                         <NavLink to='/blog' className={({ isActive }) => isActive ? 'text-primary' : 'default'}> Blog</NavLink>
                     </li>
-
+                    <motion.button
+                        className='btn btn-primary btn-md rounded '
+                    >Register</motion.button>
+                    <motion.button
+                        className='btn rounded'
+                    >Admin</motion.button>
                 </ul>
 
                 {/* hamburger 
                  */}
 
-                <Hamburger className='md:hidden text-xl border  mr-5' toggled={menuOpen} toggle={setMenuOpen} />
+                <span className='md:hidden text-md border  mr-5'>
+                    <Hamburger toggled={menuOpen} toggle={setMenuOpen} />
+                </span>
                 {/* <span onClick={() => setMenuOpen(!menuOpen)} className='md:hidden text-xl border p-1 mr-3'><HiBars3BottomLeft></HiBars3BottomLeft></span> */}
 
 
@@ -71,7 +78,12 @@ const Navbar = () => {
                         className='pl-3'>
                         <NavLink to='/blog' className={({ isActive }) => isActive ? 'text-primary' : 'default'}> Blog</NavLink>
                     </motion.li>
-
+                    <motion.button
+                        className='btn btn-primary btn-md rounded-sm block'
+                    >Register</motion.button>
+                    <motion.button
+                        className='btn rounded-sm block'
+                    >Admin</motion.button>
                 </motion.ul>
             </div>
         </div>
